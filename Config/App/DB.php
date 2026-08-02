@@ -30,4 +30,23 @@ class DB extends Conexion{
         return $limit === 1 ? $rows[0] : $rows;
     }
 
+    //inserción de registros en la base de datos
+    public static function insert($table, $params){
+        $cols = "";
+        $placeholders = "";
+
+        foreach($params as $key => $value){
+            $cols .= "{$key},";
+            $placeholders .= ":{$key},";
+        }
+        $cols = substr($cols, 0, -1); // Elimina la última coma
+        $placeholders = substr($placeholders, 0, -1); // Elimina la última coma
+
+        $stmt = "INSERT INTO $table ($cols) VALUES ($placeholders)";
+
+        if($id = parent::query($stmt, $params)){
+            return $id;
+        }
+        return false;
+    }
 }

@@ -12,7 +12,11 @@ class Roles extends Controller{
         $data['page_title'] = "Mini Market | Roles de Usuario";
         $data['page_name'] = "Roles de Usuario";
         $data['functions_js'] = "Roles.js";
-        $data ['roles'] = RolesModel::listEqual('roles', ['estado_rol' => 1],1);
+
+        // Obtener los roles activos desde la base de datos
+       $data ['roles'] = RolesModel::listEqual('roles');
+       $datos = ['nombre_rol' => 'WebSite', 'estado_rol' => 1];
+       //RolesModel::insert('roles', $datos);
         $this->views->getView($this, 'roles', $data);
     }
 
