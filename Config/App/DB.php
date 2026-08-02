@@ -2,25 +2,32 @@
 
 class DB extends Conexion{
 
-    private $conexion, $query, $values;
+//listar registros desde la base de datos, o un registro en especifico.
 
-    public function __construct()
-    {
-        //parent::__construct();
-        $this->conexion = new Conexion();
-        $this->conexion->conect();
-    }
+    public static function listEqual($table, $params = [], $limit = null){
+        $cols_values = "";
+        $limits = "";
 
-    /**
-     * Ejecutar consultas
-     */
-    public function selectAll(string $query)
-    {
-        $this->query = $query;
-        $result = $this->conexion->conect()->prepare($this->query);
-        $result->execute();
-        $data = $result->fetchAll(PDO::FETCH_ASSOC);
-        return $data;
+        if(!empty($params)){
+            $cols_values .= " WHERE ";
+            foreach($params as $key => $value){
+                $cols_values .= "{$key} = :{$key} AND";            }
+           $cols_values = substr($cols_values, 0, -3); // Elimina el último " AND " 
+        }
+        
+        if(!empty($limit)){
+            $limits = " LIMIT {$limit}";
+        }
+
+
+        // Reemplaza los marcadores de posición con los valores reales
+        $stmt = "SELECT * FROM $table {$cols_values} {$limits}";
+
+        if(!$rows = parent::query($stmt, $params)){
+            return false;
+        }
+
+        return $limit === 1 ? $rows[0] : $rows;
     }
 
 }

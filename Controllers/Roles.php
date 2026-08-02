@@ -12,7 +12,7 @@ class Roles extends Controller{
         $data['page_title'] = "Mini Market | Roles de Usuario";
         $data['page_name'] = "Roles de Usuario";
         $data['functions_js'] = "Roles.js";
-        $data ['roles'] = $this->model->listRoles();
+        $data ['roles'] = RolesModel::listEqual('roles', ['estado_rol' => 1],1);
         $this->views->getView($this, 'roles', $data);
     }
 

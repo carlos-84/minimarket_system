@@ -1,9 +1,9 @@
 <?php
 
-const base_url = "http://localhost/minimarket_system";
+const base_url = "http://localhost/minimarket";
 
 // contante para archivos
-define("BASE_PATH", "C:\wamp64\www\minimarket_system");
+define("BASE_PATH", "C:\wamp64\www\minimarket");
 
 
 // CONSTANTES DE CONEXION
