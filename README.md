@@ -12,3 +12,5 @@ Proyecto personal
 ###########
 1.Creando el metodo dinamico de update
 2.Realizando las pruebas
+########
+1.Creando delete metodo dinamico

@@ -114,4 +114,28 @@ class DB extends Conexion{
         
         }
     }
+
+    public static function delete($table, $params, $limit = 1){
+        //DELETE FROM productos WHERE idpro = 1 AND estado = 1 limit 1;
+        $cols_values = "";
+        $limits = "";
+        if(!empty($params)){
+            $cols_values .= " WHERE ";
+            foreach($params as $key => $value){
+                $cols_values .= "{$key} = :{$key} AND";            }
+           $cols_values = substr($cols_values, 0, -3); // Elimina el último " AND " 
+        }
+
+        if($limit !== null){
+            $limits = " LIMIT {$limit}";
+        }
+
+        $stmt = "DELETE FROM $table {$cols_values} {$limits}";
+
+        if(!$row = parent::query($stmt, $params)){
+            return false;
+        }
+        return $row;
+    }
+
 }
