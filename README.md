@@ -9,3 +9,6 @@ Proyecto personal
 ############
 1.crenado consultas con inner join, con crud dinamico
 2.realizando pruebas
+###########
+1.Creando el metodo dinamico de update
+2.Realizando las pruebas

@@ -80,4 +80,38 @@ class DB extends Conexion{
         }
         return false;
     }
+
+    //actualización de registros en la base de datos
+    public static function update($table, $params  = [],  $id = []){
+        //UDATE producto SET namepro = :namepro WHERE idpro = 1 AND estado = 1;
+        $cols = "";
+        $placeholders = "";
+
+        foreach($params as $key => $value){
+    
+            $placeholders .= " {$key} = :{$key}, ";
+        }
+        $placeholders = substr($placeholders, 0, -2); // Elimina la última coma y espacio
+
+        if (count($id) > 1) {
+             foreach($id as $key => $value){
+            $cols .= " {$key} = :{$key} AND";           
+            }
+
+           $cols = substr($cols, 0, -3); // Elimina el último
+            
+        }else{
+            foreach($id as $key => $value){
+            $cols .= " $key = :$key"; 
+        }
+        
+        $stmt = "UPDATE $table SET $placeholders WHERE $cols";
+
+            if(!parent::query($stmt, array_merge($params, $id))){
+                return false;
+            }
+            return true;
+        
+        }
+    }
 }
