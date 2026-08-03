@@ -6,3 +6,6 @@ Proyecto personal
 ###############
 1.Creando en metodo insert dinamico
 2.Realizando pruebas de funcionamiento del metodo
+############
+1.crenado consultas con inner join, con crud dinamico
+2.realizando pruebas

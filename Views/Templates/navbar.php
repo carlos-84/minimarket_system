@@ -41,12 +41,17 @@
 
     <li class="nav-header">PRODUCCION</li>
     <li class="nav-item">
-      <a href="../../iframe.html" class="nav-link">
-        <i class="nav-icon fas fa-ellipsis-h"></i>
+      <a href="<?= base_url(); ?>/Categorias" class="nav-link">
+        <i class="fas fa-layer-group"></i>
         <p>Catégorias</p>
       </a>
     </li>
-
+    <li class="nav-item">
+      <a href="<?= base_url(); ?>/Productos" class="nav-link">
+        <i class="fab fa-product-hunt"></i>
+        <p>Productos</p>
+      </a>
+    </li>
 
   </ul>
 </nav>
