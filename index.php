@@ -1,7 +1,7 @@
 <?php
   require_once("Config/Config.php");
   require_once("Helpers/Helpers.php");
-  
+   echo APP_JS;
     $ruta  = !empty($_GET['url']) ? $_GET['url'] : CONTROLLER_DEFAULT."/".METHOD_DEFAULT;
     $arrExplode = explode("/",$ruta);
     $controller = $arrExplode[0];
@@ -27,7 +27,7 @@
     //$dirContrller = "Controllers/". $controller. ".php";
     $dirContrller = CONTROLLER . DS . $controller . ".php";
     //$errorController = "Controllers/Error404.php";
-    $errorController = CONTROLLER . DS . "Error404.php";
+    $errorController = CONTROLLER . DS . CONTROLLER_ERROR .".php";
 
     if (file_exists($dirContrller)) {
         require_once $dirContrller;

@@ -14,20 +14,43 @@ define("BASE_PATH", "C:\wamp64\www\minimarket");
     const DB_PASWWORD = "";
     const DB_CHARSET = "utf8";
 
-    /*-------------------------------------------------------*/
-    
-    /*     CONTROLLER METHOD DEFAULT                        */
-    
-    /*----------------------------------------------------*/
-    define("DS", DIRECTORY_SEPARATOR);
-    define("ROOT", dirname(__DIR__));
-    define("CONTROLLER", ROOT . DS . "Controllers");
+/* ----------------------------------------------------- */
+/*             INFORMACION DEL SITIO                  */
+/* ----------------------------------------------------- */
+define('SITE_CHARSET', 'UTF-8');
+define('SITE_NAME', 'MINIMARKET');
+define('SITE_VERSION', '1.0.0');
+define('SITE_LOGO', 'logo.png');
+define('SITE_FAVICON', 'favicon.ico');
+define('SITE_DESC', 'MINIMARKET SYSTEM');
+define('SITE_LOGO_MAIN', 'main.logo.png');
 
-    /*-------------------------------------------------------*/
-    
-    /*     CONTROLLER METHOD DEFAULT                        */
-    
-    /*----------------------------------------------------*/
+/* ----------------------------------------------------- */
+/*             DIRECTORIOS DE LA APP                    */
+/* ----------------------------------------------------- */
+define('DS', DIRECTORY_SEPARATOR);
+define('ROOT', dirname(__DIR__));
+define('CONTROLLER', ROOT . DS . 'Controllers');
+define('VIEW', ROOT . DS . "Views");
+define('TEMPLATE', VIEW . DS . "Templates");
 
-    define("CONTROLLER_DEFAULT", "Home");
-    define("METHOD_DEFAULT", "home");
+/* ----------------------------------------------------- */
+/*             ARCHIVOS PUBLICOS                         */
+/* ----------------------------------------------------- */
+define('ASSETS', base_url . '/Assets');
+define('CSS', ASSETS . "/css");
+define('JS', ASSETS . "/js");
+define('APP_JS', ASSETS . "/app/js");
+define('PLUGINS', ASSETS . "/plugins");
+define('FONTS', ASSETS . "/font-awesome");
+define('IMG', ASSETS . "/img");
+define('UPLOADS', ASSETS . "/uploads");
+
+
+/* ----------------------------------------------------- */
+/*              CONTROLLER - METHOD - ERORR DEFAULT              */
+/* ----------------------------------------------------- */
+
+define('CONTROLLER_DEFAULT', 'Home');
+define('METHOD_DEFAULT', 'home');
+define('CONTROLLER_ERROR', 'Error404');

@@ -15,3 +15,7 @@ Proyecto personal
 ########
 1.Creando delete metodo dinamico
 
+##################
+1.Creando constantes directorios
+2.Creando constantes archivos publicos
+3.Creando constantes informacion del sitio
