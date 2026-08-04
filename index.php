@@ -2,7 +2,7 @@
   require_once("Config/Config.php");
   require_once("Helpers/Helpers.php");
   
-    $ruta  = !empty($_GET['url']) ? $_GET['url'] : "Home/home";
+    $ruta  = !empty($_GET['url']) ? $_GET['url'] : CONTROLLER_DEFAULT."/".METHOD_DEFAULT;
     $arrExplode = explode("/",$ruta);
     $controller = $arrExplode[0];
     $metodo = !empty($arrExplode[1]) ? $arrExplode[1] : $arrExplode[0];
@@ -24,17 +24,29 @@
         }
     }
     require_once("Config/App/Autoload.php");
-    $dirContrller = "Controllers/". $controller. ".php";
+    //$dirContrller = "Controllers/". $controller. ".php";
+    $dirContrller = CONTROLLER . DS . $controller . ".php";
+    //$errorController = "Controllers/Error404.php";
+    $errorController = CONTROLLER . DS . "Error404.php";
+
     if (file_exists($dirContrller)) {
         require_once $dirContrller;
         $controller = new $controller();
         if (method_exists($controller, $metodo)) {
             $controller->$metodo($parametro);
         }else {
-            echo "No existe el método. ";
+            
+            require_once $errorController;
+            $controller = new Error404();
+            $controller->error404();
+            //echo "No existe el método. ";
         }
     }else {
-        echo "No existe el controlador. ";
+
+        require_once $errorController;
+        $controller = new Error404();
+        $controller->error404();
+        //echo "No existe el controlador. ";
     }
 
 
