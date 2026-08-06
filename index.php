@@ -1,7 +1,7 @@
 <?php
   require_once("Config/Config.php");
   require_once("Helpers/Helpers.php");
-   echo APP_JS;
+   
     $ruta  = !empty($_GET['url']) ? $_GET['url'] : CONTROLLER_DEFAULT."/".METHOD_DEFAULT;
     $arrExplode = explode("/",$ruta);
     $controller = $arrExplode[0];

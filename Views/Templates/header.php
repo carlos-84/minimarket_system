@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $data['page_title']; ?></title>
-
+  <link rel="shortcut icon" href="<?php echo base_url; ?>/Assets/img/isotipo.ico" type="image/x-icon">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/google-fonts.css">
   <!-- Font Awesome -->
@@ -80,9 +80,10 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="../../index3.html" class="brand-link">
-        <img src="<?php echo base_url; ?>/Assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Mini Market System</span>
+      <a href="<?= base_url; ?>" class="brand-link">
+        <!-- <img src="<?php echo base_url; ?>/Assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
+        <img src="<?php echo base_url; ?>/Assets/img/nombre.png" class="img-fluid" alt="nombre" style="width: 91%; height: 50px;  margin-left: 3px; margin-top: -1px;">
+        <!-- <span class="brand-text font-weight-light">Mini Market</span> -->
       </a>
 
       <!-- Sidebar -->
