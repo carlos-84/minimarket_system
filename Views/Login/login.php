@@ -56,7 +56,7 @@
       
 
       <p class="mb-2">
-        <a href="forgot-password.html">Solicitar cambio de contraseña</a>
+        <a href="<?php echo base_url; ?>/Register">Registrarse</a>
       </p>
     </div>
     <!-- /.card-body -->

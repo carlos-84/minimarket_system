@@ -51,6 +51,6 @@ define('UPLOADS', ASSETS . "/uploads");
 /*              CONTROLLER - METHOD - ERORR DEFAULT              */
 /* ----------------------------------------------------- */
 
-define('CONTROLLER_DEFAULT', 'Home');
-define('METHOD_DEFAULT', 'home');
+define('CONTROLLER_DEFAULT', 'Login');
+define('METHOD_DEFAULT', 'login');
 define('CONTROLLER_ERROR', 'Error404');
