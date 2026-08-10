@@ -29,7 +29,7 @@
         <p class="login-box-msg">Registrarse</p>
 
         <form id="frmRegister" method="post">
-          
+
           <div class="input-group mb-3">
             <input type="text" id="name" name="name" class="form-control" placeholder="Nombre del usuario">
             <div class="input-group-append">
@@ -88,6 +88,9 @@
       <!-- AdminLTE App -->
       <script src="<?php echo base_url; ?>/Assets/js/adminlte.min.js"></script>
       <!-- Script personalizado -->
+      <script>
+        const base_url = "<?php echo base_url(); ?>";
+      </script>
       <script src="<?php echo base_url; ?>/Assets/app/js/<?php echo $data['functions_js']; ?>"></script>
 </body>
 
