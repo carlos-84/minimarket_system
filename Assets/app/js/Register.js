@@ -1,22 +1,41 @@
-document.addEventListener("DOMContentLoaded", function () {
 
-},false);
+
+document.addEventListener("DOMContentLoaded", function () {
+ 
+}, false);
 
 async function save(e) {
     e.preventDefault();
-    
-   let frmRegister = new FormData(document.querySelector("#frmRegister"));
+    const frmRegister = document.querySelector("#frmRegister");
+    let datos = new FormData(frmRegister);
     try {
         const url = base_url + "/Register/save";
 
         const respuesta = await fetch(url, {
             method: "POST",
-            body: frmRegister,
+            body: datos,
         });
 
         const resultado = await respuesta.json();
-
-        console.log(resultado);
+        
+        if (resultado.status === true) {
+            new Noty({
+                type: 'success',
+                text: `${resultado.msg}`,
+                layout: "topCenter",
+                theme: "metroui",
+                timeout: 1500
+            }).show();
+            frmRegister.reset();
+        } else {
+            new Noty({
+                type: 'error',
+                text: `${resultado.error}`,
+                layout: "topCenter",
+                theme: "metroui",
+                timeout: 1500
+            }).show();
+        }
     } catch (err) {
         console.log(err);
     }

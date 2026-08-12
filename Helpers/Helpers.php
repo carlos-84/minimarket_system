@@ -37,3 +37,11 @@ function debug($data){
     $format .= print_r('</pre>');
     //return $format;
 }
+
+function limpiar($datos) {
+    $datos = trim($datos);
+    $datos = stripslashes($datos);
+    $datos = htmlspecialchars($datos, ENT_QUOTES, 'UTF-8');
+    //$datos = utf8_decode($datos);
+    return $datos;
+}

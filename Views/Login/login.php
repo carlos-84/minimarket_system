@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/adminlte.min.css">
+   <!-- Noty Alert -->
+  <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/plugins/noty/noty.min.css">
    <!-- icheck bootstrap -->
   <!-- <link type="text/css" rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/icheck-bootstrap.min.css"> -->
 
@@ -72,5 +74,7 @@
 <script src="<?php echo base_url; ?>/Assets/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url; ?>/Assets/js/adminlte.min.js"></script>
+
+<script src="<?php echo base_url; ?>/Assets/plugins/noty/noty.min.js"></script>
 </body>
 </html>

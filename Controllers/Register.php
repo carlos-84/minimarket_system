@@ -1,6 +1,7 @@
 <?php
 
-class Register extends Controller{
+class Register extends Controller
+{
 
 
     public function __construct()
@@ -11,37 +12,38 @@ class Register extends Controller{
     public function register()
     {
         $data['page_title'] = "Register";
-         $data['functions_js'] = "Register.js";
+        $data['functions_js'] = "Register.js";
         $this->views->getView($this, "register", $data);
     }
 
-    public function save(){
+    public function save()
+    {
 
         $data = [];
 
-        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        // Validar los campos del formulario 
+            // Validar los campos del formulario 
 
-            $errores = RegisterModel::validar();
-            $data = $errores;
-            if (empty($errores)) {
+            $val = new Validations();
+            $val->name('name')->value(limpiar($_POST['name']))->required();
+            $val->name('email')->value(limpiar($_POST['email']))->pattern('email')->required();
+            $val->name('password')->value(limpiar($_POST['password']))->min(5)->max(20)->pattern('alphanum')->equal(limpiar($_POST['confirm_password']))->required();
 
+            if ($val->isSuccess()) {
+                $pasHash = hash("SHA256", limpiar($_POST['password']));
                 $data = [
-                    'id_rol' => 3,
-                    'nombre' => $_POST['name'],   
-                    'email' => $_POST['email'],
-                    'password' => $_POST['password']
+                    'nombre' => limpiar($_POST['name']),
+                    'email' => limpiar($_POST['email']),
+                    'password' => $pasHash
                 ];
                 $idisert = RegisterModel::insert('usuarios', $data);
-                 $data = ['status' => true, 'msg' => 'Usuario registrado correctamente'];
+                $data = ['status' => true, 'msg' => 'Registrado correctamente'];
+            }else {
+                $data = ['error' => $val->getErrors()];
             }
-        
-           
-        
         }
 
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
     }
-
 }

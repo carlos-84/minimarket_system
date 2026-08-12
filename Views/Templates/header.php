@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/adminlte.min.css">
+  <!-- Noty Alert -->
+  <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/plugins/noty/noty.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">

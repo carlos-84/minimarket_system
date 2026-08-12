@@ -19,6 +19,8 @@
 <script src="<?php echo base_url; ?>/Assets/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url; ?>/Assets/js/adminlte.min.js"></script>
+
+<script src="<?php echo base_url; ?>/Assets/plugins/noty/noty.min.js"></script>
 <!-- Script personalizado -->
  <script>
   const base_url = "<?php echo base_url(); ?>";
