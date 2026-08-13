@@ -1,4 +1,6 @@
-  <footer class="main-footer">
+ <?php if (!empty($data)) {?>
+ 
+ <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 1.0.0
     </div>
@@ -28,3 +30,5 @@
 <script src="<?php echo base_url; ?>/Assets/app/js/<?php echo $data['functions_js']; ?>"></script>
 </body>
 </html>
+
+<?php } ?>

@@ -1,3 +1,6 @@
+
+<?php if (!empty($data)) {
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -70,7 +73,7 @@
             <!-- Menu Footer-->
             <li class="user-footer">
               <a href="#" class="btn btn-default btn-flat">Perfil</a>
-              <a href="#" class="btn btn-default btn-flat float-right">Cerrar Sesión</a>
+              <a href="<?php echo base_url(); ?>/Logout" class="btn btn-default btn-flat float-right">Cerrar Sesión</a>
             </li>
           </ul>
         </li>
@@ -111,3 +114,4 @@
             </div>
           </div>
         </div>
+      <?php } ?>

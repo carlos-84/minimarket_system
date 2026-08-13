@@ -1,4 +1,6 @@
-<?php header_nav($data); ?>
+<?php if (!empty($data)) {
+  header_nav($data);
+?>
 
 
 <!-- Content Wrapper. Contains page content -->
@@ -39,7 +41,7 @@
             </div>
             <div class="card-body">
                 Start creating your amazing application! 
-              <?= debug($data); ?>
+              <?php debug($data); ?>
             </div>
             <!-- /.card-body -->
             <!-- <div class="card-footer">
@@ -54,4 +56,4 @@
 </div>
 <!-- /.content-wrapper -->
 
-<?php footer($data); ?>
+<?php footer($data); } ?>

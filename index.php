@@ -1,4 +1,5 @@
 <?php
+    session_start();
   require_once("Config/Config.php");
   require_once("Helpers/Helpers.php");
    
