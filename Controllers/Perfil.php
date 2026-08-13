@@ -6,9 +6,8 @@ class Perfil extends Controller
 
     public function __construct()
     {
-        if (!isset($_SESSION['login'])) {
-            header('Location:' . base_url . '/Login');
-        }
+        Permisos::get_permisos(1);
+        Auth::noAuth();
         return parent::__construct();
     }
 

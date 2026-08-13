@@ -2,6 +2,33 @@
 
 class DB extends Conexion{
 
+public static function consultarSQL(string $query)
+{
+    $link = new Conexion();
+    $link = $link->conect();
+    $resultado = $link->query($query);
+    $array = [];
+
+    while ($registro = $resultado->fetch(pdo::FETCH_ASSOC)) {
+        $array[] = $registro;
+    }
+    $resultado->closeCursor();
+    return $array;
+}
+
+/**
+*
+* Consultar de forma plana un SQL
+* @param string $sql
+*
+*/
+
+public static function SQL(string $query)
+{
+    $resultado = self::consultarSQL($query);
+    return $resultado;
+}
+
 //listar registros desde la base de datos, o un registro en especifico.
 
     public static function listEqual($table, $params = [], $limit = null){

@@ -25,8 +25,8 @@ public function __construct()
         if($_SERVER['REQUEST_METHOD'] == "POST"){
             $val = new Validations();
 
-            $val->name('email')->value($_POST["email"])->required();
-            $val->name('password')->value($_POST["password"])->required();
+            $val->name('email')->value($_POST["email"])->pattern('email')->required();
+            $val->name('password')->value(limpiar($_POST["password"]))->min(5)->max(20)->pattern('alphanum')->required();
             
             // si todo va bien se loguea
             if ($val->isSuccess()) {
@@ -41,7 +41,7 @@ public function __construct()
                     $_SESSION['nombre'] = $usuario['nombre'];
                     $_SESSION['email'] = $usuario['email'];
                     $_SESSION['login'] = true;
-                    $arrJson = ['msg' => 'El usuario se ha logueado'];
+                    $arrJson = ['msg' => '¡El usuario se ha logueado corretamente!'];
                 }
                
             }else{

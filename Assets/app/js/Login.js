@@ -25,7 +25,18 @@ async function login() {
                 timeout: 1500
             }).show();  
         }else {
-            window.location.href = `${base_url}/Perfil`;
+            new Noty({
+                type: 'success',
+                text: `${resultado.msg}`,
+                layout: "topCenter",
+                theme: "metroui",
+                timeout: 1500
+            }).show();
+
+            setTimeout(()=>{
+                 window.location.href = `${base_url}/Perfil`;
+            },1500)
+           
         }
 
     } catch (err) {
