@@ -2,6 +2,14 @@
 
 class Auth
 {
+    public static function sessionUser(int $iduser)
+{
+    $respuesta = DB::SQL("SELECT * FROM usuarios u INNER JOIN roles r ON u.id_rol = r.id WHERE u.id_usuario = {$iduser}") ;
+    $_SESSION['userData'] = $respuesta[0];
+    return $respuesta[0];
+}
+
+
     /* 
    *
    * @void sesiones
@@ -21,4 +29,6 @@ class Auth
         $_SESSION = [];
         header('Location:' . base_url . '/Login');
     }
+
+
 }

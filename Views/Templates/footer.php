@@ -19,6 +19,21 @@
 <script src="<?php echo base_url; ?>/Assets/js/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="<?php echo base_url; ?>/Assets/js/bootstrap.bundle.min.js"></script>
+
+<!-- DataTables  & Plugins -->
+<script src="<?php echo base_url; ?>/Assets/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/dataTables.responsive.min.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/responsive.bootstrap4.min.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/buttons.bootstrap4.min.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/jszip.min.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/pdfmake.min.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/vfs_fonts.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/buttons.html5.min.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/buttons.print.min.js"></script>
+<script src="<?php echo base_url; ?>/Assets/js/buttons.colVis.min.js"></script>
+
 <!-- AdminLTE App -->
 <script src="<?php echo base_url; ?>/Assets/js/adminlte.min.js"></script>
 

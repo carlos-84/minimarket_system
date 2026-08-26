@@ -41,6 +41,8 @@ public function __construct()
                     $_SESSION['nombre'] = $usuario['nombre'];
                     $_SESSION['email'] = $usuario['email'];
                     $_SESSION['login'] = true;
+                    Auth::sessionUser($_SESSION['idUser']);
+
                     $arrJson = ['msg' => '¡El usuario se ha logueado corretamente!'];
                 }
                

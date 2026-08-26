@@ -41,7 +41,7 @@
                 </div>
                 <div class="card-body">
                     Start creating your amazing application!
-                    <?php debug($data); echo $_SESSION['email']; ?>
+                    <?php debug(Auth::sessionUser($_SESSION['idUser']));  ?>
                 </div>
                 <!-- /.card-body -->
                 <!-- <div class="card-footer">

@@ -5,8 +5,11 @@ class Roles extends Controller{
 
     public function __construct()
     {
-        parent::__construct();
+        Permisos::get_permisos(4);
+        Auth::noAuth();
+        return parent::__construct();
     }
+
 
     public function roles(){
         $data['page_title'] = "Mini Market | Roles de Usuario";

@@ -45,11 +45,17 @@
             <p>Listar usuarios</p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="<?= base_url(); ?>/Roles" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Roles</p>
+          </a>
+        </li>
       </ul>
     </li>
     <?php endif ?>
 
-    <?php if (!empty($_SESSION['permisos'][5]['r'])) :?>
+    <?php if (!empty($_SESSION['permisos'][6]['r'])) :?>
     <li class="nav-header">PRODUCCION</li>
     <li class="nav-item">
       <a href="<?= base_url(); ?>/Categorias" class="nav-link">
@@ -58,7 +64,7 @@
       </a>
     </li>
   <?php endif ?>
-  <?php if (!empty($_SESSION['permisos'][4]['r'])) :?>
+  <?php if (!empty($_SESSION['permisos'][5]['r'])) :?>
 
     <li class="nav-item">
       <a href="<?= base_url(); ?>/Productos" class="nav-link">

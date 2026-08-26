@@ -1,0 +1,48 @@
+{
+    "decimal": "",
+    "emptyTable": "No hay información disponible en la tabla",
+    "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+    "infoEmpty": "Mostrando 0 a 0 de 0 Entradas",
+    "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+    "infoPostFix": "",
+    "thousands": ",",
+    "lengthMenu": "Mostrar _MENU_ Entradas",
+    "loadingRecords": "Cargando...",
+    "processing": "Procesando...",
+    "search": "Buscar:",
+    "zeroRecords": "Sin resultados encontrados",
+    "paginate": {
+        "first": "Primero",
+        "last": "Último",
+        "next": "Siguiente",
+        "previous": "Anterior"
+    },
+    "buttons": {
+        "collection": "Colección",
+        "colvis": "Visibilidad",
+        "colvisRestore": "Restaurar visibilidad",
+        "copy": "Copiar",
+        "copyKeys": "Presione ctrl o u2318 + C para copiar los datos de la tabla al portapapeles del sistema. <br \/> <br \/> Para cancelar, haga clic en este mensaje o presione escape.",
+        "copySuccess": {
+            "_": "Copiadas %ds filas al portapapeles",
+            "1": "Copiada 1 fila al portapapeles"
+        },
+        "copyTitle": "Copiar al portapapeles",
+        "createState": "Crear Estado",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "_": "Mostrar %d filas",
+            "-1": "Mostrar todas las filas",
+            "1": "Mostrar 1 fila"
+        },
+        "pdf": "PDF",
+        "print": "Imprimir",
+        "removeAllStates": "Remover Estados",
+        "removeState": "Remover",
+        "renameState": "Cambiar nombre",
+        "savedStates": "Estados Guardados",
+        "stateRestore": "Estado %d",
+        "updateState": "Actualizar"
+    }
+}

@@ -13,6 +13,10 @@
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/google-fonts.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/adminlte.min.css">
   <!-- Noty Alert -->

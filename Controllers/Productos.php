@@ -4,6 +4,8 @@ class Productos extends Controller{
 
     public function __construct()
     {
+         Permisos::get_permisos(5);
+        Auth::noAuth();
         parent::__construct();
     }
 
