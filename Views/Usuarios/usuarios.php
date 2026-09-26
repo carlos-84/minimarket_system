@@ -61,15 +61,18 @@ if (!empty($data)) {
                 </div>
                 <!-- /.card-body -->
                 <!-- <div class="card-footer">
-          Footer
-        </div> -->
+                    Footer
+                </div> -->
                 <!-- /.card-footer-->
             </div>
             <!-- /.card -->
-
+            
         </section>
         <!-- /.content -->
     </div>
+    <!-- CONTENEDOR VACÍO PARA EL MODAL -->
+    <div id="contenedorModalEditarUser"></div>
+     
     <!-- /.content-wrapper -->
 <?php include "./Views/Modal/modal_user.php"; ?>
 <?php footer($data);

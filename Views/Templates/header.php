@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/select2-bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/select2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url; ?>/Assets/css/adminlte.min.css">
   <!-- Noty Alert -->

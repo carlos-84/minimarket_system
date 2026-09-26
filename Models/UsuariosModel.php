@@ -15,4 +15,28 @@ class UsuariosModel extends DB{
         return $respuesta;
     }
 
+    public static function rolesAll()
+    {
+        $respuesta = DB::SQL("SELECT * FROM roles WHERE activo != 0");
+        return $respuesta;
+    }
+
+    public static function insertUser($params)
+    {
+        $idInsert = DB::insert('usuarios', $params);
+        return $idInsert;
+    }
+
+    public static function updates($params, $id)
+    {
+        $idUpdate = DB::update('usuarios', $params, ['id_usuario' => $id]);
+        return $idUpdate;
+    }
+
+    public static function deleteUser($id)
+    {
+        $idDelete = DB::delete('usuarios', ['id_usuario' => $id]);
+        return $idDelete;
+    }
+
 }
